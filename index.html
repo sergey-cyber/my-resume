@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>resume-sergey-zenkovich</title>
+  <script src="js/slider.js"></script>
+  <link rel="stylesheet" href="./styles/slider.css">
+  <link rel="stylesheet" href="./styles/aboutMe.css">
+  <link rel="stylesheet" href="./styles/mySkills.css">
+  <link rel="stylesheet" href="./styles/myProgects.css">
+  <link rel="stylesheet" href="./styles/burgerMenu.css">
+  <link rel="stylesheet" href="./styles/myContacts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="slides">
+    <section id="norwegian" class="aboutMe">
+      <div class='abutMe__avatar'>
+        <div class="abutMe__avatar__info">
+          <img class="abutMe__avatar__img" alt='' src='./images/ava.png' />
+          <h1>Сергей<br>Зенькович</h1>
+        </div>
+      </div>
+      <div class='abutMe__info'>
+        <div id="norwegianVScode" class="vscode">
+          <div class="vscodeText">
+            <p class="vscodePrintText">
+              <!-- for auto print text about me -->
+            </p>
+          </div>
+          <img alt="" src="./images/settings.png" class="vscodeImg">
+        </div>
+      </div>
+    </section>
+    <section id="french" class="mySkills">
+      <x-sign class="mySkills__autoPrintText">
+
+      </x-sign>
+      <div class="mySkills__animation">
+        <div class="box">
+          <span style="--i:1"> <img src="./images/skills/1.png"> </span>
+          <span style="--i:2"> <img src="./images/skills/2.png"> </span>
+          <span style="--i:3"> <img src="./images/skills/3.png"> </span>
+          <span style="--i:4"> <img src="./images/skills/4.png"> </span>
+          <span style="--i:5"> <img src="./images/skills/5.png"> </span>
+          <span style="--i:6"> <img src="./images/skills/6.png"> </span>
+          <span style="--i:7"> <img src="./images/skills/7.png"> </span>
+          <span style="--i:8"> <img src="./images/skills/8.png"> </span>
+        </div>
+      </div>
+    </section>
+    <!-- My Projects page -->
+    <section id="spanish" class="myProgects">
+      <h1>My projects</h1>
+      <div class="spinning__react__icon">
+        <img alt="react" src="./images/myProjects/react-icon.webp">
+        <div class="shadow"></div>
+      </div>
+      <div class="myProgects__gamesCard">
+        <div class="myProgects__gamesCard__control">
+          <button id="gamesButton">Games</button>
+        </div>
+      </div>
+      <div class="myProgects__card">
+        <div class="myProgects__card__control">
+          <button id="projectsButton">My projects</button>
+        </div>
+      </div>
+      <!-- My projects window -->
+      <!-- Game navbar -->
+      <div class="gamesWindow__navBar">
+        <div class="gamesWindow__navBar__wrapper">
+          <!-- if this add item, please add too in myGamesArray in file myProject.js -->
+          <div class="gamesWindow__navBar__item" >Destroy Balls</div>
+          <div class="gamesWindow__navBar__item" >Tennis</div>
+          <div class="gamesWindow__navBar__item" >Card game</div>
+          <div class="gamesWindow__navBar__item" >Sea battle</div>        
+        </div>
+      </div>
+      <!-- Projects navbar -->   
+      <div class="projectsWindow__navBar">
+        <div class="projectsWindow__navBar__wrapper">
+          <div class="projectsWindow__navBar__item" >Social Network</div>
+          <div class="projectsWindow__navBar__item" >My Notepad</div>
+          <div class="projectsWindow__navBar__item" >Web site for it-schole</div>        
+        </div>
+      </div>  
+      <div class="projsctsWindow__content"><!-- this window is general for all projects, settings by js -->
+        <div class='projsctsWindow__content__wrapper'>
+          <!-- Here will be content for selected project, generate by JS -->
+        </div>
+        <div class="closeBtn">
+          <img alt='' src="images/myProjects/close.jpg">
+        </div>
+      </div>
+ 
+    </section>
+    <!-- My contacts -->
+    <section id="hindi" class="myContacts">
+      <h1>My contacts</h1>
+      <div class="myContacts__icons">
+        <a class="myContacts__icons__item" href="https://vk.com/id11239634" target="_blank">
+          <img alt='' src="./images/myContacts/vk.webp">
+        </a>
+        <a class="myContacts__icons__item" href="https://www.instagram.com/zen.sergei/" target="_blank">
+          <img alt='' src="./images/myContacts/instagram.png">
+        </a>
+        <a class="myContacts__icons__item" href="https://github.com/sergey-cyber" target="_blank">
+          <img alt='' src="./images/myContacts/github.png">
+        </a>
+      </div>
+      <div class="telAndMail">
+        <p>Tel. +7 983 402-71-56</p>
+        <p>E-mail: zenkovich_so@mail.ru</p>
+      </div>
+    </section>   
+  </div>
+
+  <!-- Burger menu -->
+  <div class="burger">
+    <span></span>
+  </div>
+  <div class="menu">
+    <div class="menuWrapper active">
+      <div class="menuItem" data-slider-target-index="1">About me</div>
+      <div class="menuItem" data-slider-target-index="2">My skills</div>
+      <div class="menuItem" data-slider-target-index="3">My projects</div>
+      <div class="menuItem" data-slider-target-index="4">Contacts</div>
+    </div>
+  </div>
+  <!--  -->
+
+  <script>
+    var mySlider = slider('.slides');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <script src="js/aboutMe.js"></script>
+  <script src="js/mySkills.js"></script>
+  <script src="js/myProjects.js"></script>
+  <script src="js/burgerMenu.js"></script>
+  <script src="js/myContacts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+/*Spining react icon*/
+.myProgects h1{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 16px;
+}
+.spinning__react__icon{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    transform-style: preserve-3d;  
+    perspective: 1000px;
+    z-index: 2;
+}
+
+.spinning__react__icon img{
+    width: 100%;
+    animation: spiningReactIcon 2s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spiningReactIcon {/*rotate react icon*/
+    0% {
+        transform: perspective(1000px) rotateY(0deg) translateY(0%);
+    }
+    50%{
+        transform: perspective(1000px) rotateY(180deg) translateY(-11%);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg) translateY(0%);
+    }
+}
+/*Shadow for Spining react icon*/
+.shadow{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate3d(-50%,60%, -200px) rotateX(80deg);
+    width: 30%;
+    height: 10%;
+    background-color: #555;
+    box-shadow: 0px 0px 75px 100px #555;
+    border-radius: 50%;
+    animation: setShadowSize 2s infinite;
+    animation-timing-function: linear;
+}
+@keyframes setShadowSize {  /*resize shadow*/
+    0% {
+        width: 30%;
+        height: 10%;
+    }
+    50% {
+        width: 13%;
+        height: 4%;
+    }
+    100% {
+        width: 30%;
+        height: 10%;
+    }
+}
+
+/*Game Card*/
+
+.myProgects__gamesCard{
+    width: 20%;
+    height: 45%;
+    background-image: url('../images/myProjects/games.jpg');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 150%;
+    top: -100%;
+    z-index: 1;
+}
+
+.myProgects__gamesCard__control{
+    position: absolute;
+    top: 99%;
+    background-color: #1C3C51;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myProgects__gamesCard__control button{
+    outline: none;
+    background-color: #1C3C51;
+    cursor: pointer;
+    border: 3px solid #FA5738;
+    color: thistle;
+    padding: 10px;
+    transition: .3s;
+}
+
+.myProgects__gamesCard__control button:hover{
+    background-color:#FA5738;
+}
+
+.myProgects__gamesCard.animationStart{
+    animation: gameCardMove 1s 1;
+    animation-timing-function: linear;
+    left: 5%;
+    top: 10%;
+}
+@keyframes gameCardMove {  /*Вылет карты Game*/
+    0% {
+        left: 150%;
+        top: -100%;
+        transform: scale(1);
+    }
+    50%{
+        left: 50%;
+        top: 10%;
+        transform: scale(0.1) rotateY(720deg);
+    }
+    100% {
+        left: 5%;
+        top: 20%;
+        transform: scale(1);
+    }
+}
+
+/*my project Card*/
+
+.myProgects__card{
+    width: 20%;
+    height: 45%;
+    background-image: url('../images/myProjects/projects.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    left: -50%;
+    top: -100%;
+    z-index: 1;
+}
+
+.myProgects__card__control{
+    position: absolute;
+    top: 99%;
+    background-color: #1A8BAB;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myProgects__card__control button{
+    outline: none;
+    background-color: #1A8BAB;
+    cursor: pointer;
+    border: 3px solid #FA5738;
+    color: #fff;
+    padding: 10px;
+    transition: .3s;
+}
+
+.myProgects__card__control button:hover{
+    background-color:#FA5738;
+}
+
+.myProgects__card.animationStartForMyProjectCard{
+    animation: myProjectCardMove 1s 1;
+    animation-timing-function: linear;
+    left: 75%;
+    top: -35%;
+}
+@keyframes myProjectCardMove {  /*Вылет карты my project*/
+    0% {
+        left: -50%;
+        top: -100%;
+        transform: scale(1);
+    }
+    50%{
+        left: 50%;
+        top: 10%;
+        transform: scale(0.1) rotateY(720deg);
+    }
+    100% {
+        left: 75%;
+        top: -35%;
+        transform: scale(1);
+    }
+} 
+
+/*My Projects oppening Window*/
+
+a{
+    outline: none;
+    text-decoration: none;
+}
+
+/*Projects window navbar*/
+.gamesWindow__navBar{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 0;
+    transition: top .3s, z-index 0s;
+}
+.gamesWindow__navBar.active{
+    z-index: 15;
+    top: 0;
+}
+.gamesWindow__navBar__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30%;
+}
+.gamesWindow__navBar__item{
+    color: #fff;
+    font-size: 25px;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.gamesWindow__navBar__item:hover{
+    color: #F4AEA3;
+}
+.gamesWindow__navBar__item::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: #F4AEA3;
+    display: block;
+    transition: .3s;
+} 
+.gamesWindow__navBar__item.active{
+    color: #F4AEA3;
+}
+.gamesWindow__navBar__item.active:after{
+    width:100%;
+}
+
+/*Projects window navbar*/
+
+.projectsWindow__navBar{
+    width: 30%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 0;
+    transition: top .3s, z-index 0s;
+}
+.projectsWindow__navBar.active{
+    z-index: 15;
+    top: 0;
+}
+.projectsWindow__navBar__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30%;
+}
+.projectsWindow__navBar__item{
+    color: #fff;
+    font-size: 25px;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.projectsWindow__navBar__item:hover{
+    color: #F4AEA3;
+}
+.projectsWindow__navBar__item::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background-color: #F4AEA3;
+    display: block;
+    transition: .3s;
+} 
+.projectsWindow__navBar__item.active{
+    color: #F4AEA3;
+}
+.projectsWindow__navBar__item.active:after{
+    width:100%;
+}
+
+/*Projects window content*/
+
+.projsctsWindow__content{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 70%;
+    height: 100%;
+    background-color: black;
+    -webkit-box-shadow: 10px 0px 10px -5px rgba(255, 255, 255, 0.6) inset;
+    -moz-box-shadow: 10px 0px 10px -5px rgba(255, 255, 255, 0.6) inset;
+    box-shadow: 10px 0px 10px -5px rgba(255, 255, 255, 0.6) inset;
+    transition: .3s;
+    z-index: 15;
+}
+.projsctsWindow__content.active{
+    left: 30%;
+}
+.closeBtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.closeBtn img{
+    width: 100%;
+    height: auto;
+}
+.projsctsWindow__content__wrapper{
+    padding:0 30px 0 30px;
+    color: #fff;
+}
+.projsctsWindow__content__wrapper h1{
+    text-align: center;
+}
+.content__inner{
+    display: flex;
+}
+.content__inner__Image{
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+}
+.content__inner__Image img{
+    width: 100%;
+    height: auto;
+}
+.content__inner__button{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content__inner__button a{
+    color: #fff;
+    padding: 10px;
+    border: solid 2px #FD583A;
+    transition: .3s;
+}
+.content__inner__button a:hover{
+    background-color: #FD583A;
+}
