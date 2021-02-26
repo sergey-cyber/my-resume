@@ -97,6 +97,9 @@ body{
 		font-size: 25px;
 		margin-bottom: 0;
 	}
+	.abutMe__avatar__info img{
+		width: 40%;
+	}
 	.abutMe__info{
 		width: 100%;
 		height: 65%;
