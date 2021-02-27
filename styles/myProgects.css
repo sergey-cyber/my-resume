@@ -135,7 +135,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     position: relative;
-    left: -50%;
+    left: -150%;
     top: -100%;
     z-index: 1;
 }
@@ -196,7 +196,7 @@ a{
     text-decoration: none;
 }
 
-/*Projects window navbar*/
+/*Games window navbar*/
 .gamesWindow__navBar{
     width: 30%;
     height: 100%;
@@ -408,22 +408,89 @@ a{
 	}
 	@keyframes myProjectCardMove {  /*Вылет карты my project*/
 		0% {
-			left: -50%;
+			left: -150%;
 			top: -100%;
 			transform: scale(1);
 		}
 		50%{
-			left: 0%;
-			top: 10%;
-			transform: scale(0.1) rotateY(720deg);
+			left: 50%;
+			top: 0%;
+			transform: scale(0.1) rotateY(360deg);
 		}
 		100% {
 			left: 50%;
 			top: -20%;
-			transform: scale(1) translateX(-50%);
+			transform: scale(1) rotateY(720deg) translateX(-50%);
 		}
 	} 
-  }
+
+    /*Games window navbar*/
+    .gamesWindow__navBar{
+        width: 100%;
+        height: 30%;
+        top: 0;
+        left: -100%;
+        transition: .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gamesWindow__navBar.active{
+        top: 0;
+        left: 0;
+    }
+    .gamesWindow__navBar__wrapper{
+        margin-top: 5%;
+    }
+    .gamesWindow__navBar__item{
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    /*Project window navbar*/
+    .projectsWindow__navBar{
+        width: 100%;
+        height: 30%;
+        top: 0;
+        left: -100%;
+        transition: .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .projectsWindow__navBar.active{
+        top: 0;
+        left: 0;
+    }
+    .projectsWindow__navBar__wrapper{
+        margin-top: 5%;
+    }
+    .projectsWindow__navBar__item{
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    /*Projects window content*/
+
+    .projsctsWindow__content{
+        top: 30%;
+        width: 100%;
+        height: 70%;
+        -webkit-box-shadow: 0px 10px 10px -5px rgba(255, 255, 255, 0.6) inset;
+        -moz-box-shadow: 0px 10px 10px -5px rgba(255, 255, 255, 0.6) inset;
+        box-shadow: 0px 10px 10px -5px rgba(255, 255, 255, 0.6) inset; 
+    }
+    .projsctsWindow__content.active{
+        left: 0;
+    }
+    .projsctsWindow__content__wrapper{
+        padding:0 15px 0 15px;
+    }
+    .content__inner__Image{
+        width: 50%;
+    }
+    .content__inner__button{
+        width: 50%;
+    }
+}
   
   
   

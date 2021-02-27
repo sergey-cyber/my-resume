@@ -159,3 +159,75 @@ document.querySelector('.projectsWindow__navBar__wrapper').addEventListener('cli
         }
     }
 });
+
+//..............For touch devices
+
+//Open My games window
+const gamesCard = document.querySelector('.myProgects__gamesCard');
+
+gamesCard.ontouchstart = function() {
+    document.querySelector('.gamesWindow__navBar').classList.add('active');
+    setTimeout(()=> {
+        document.querySelector('.projsctsWindow__content').classList.add('active');
+    },300);
+    //Делаем цвет открывающего ся окна цвета карточки игр
+    document.querySelector('.gamesWindow__navBar').style.backgroundColor = '#1C3C51';
+    document.querySelector('.projsctsWindow__content    ').style.backgroundColor = '#1C3C51';
+    //Отображаем всегда первую игру при открывании списка игр
+    document.querySelector('.projsctsWindow__content__wrapper').innerHTML = wrapperForGames[0];
+    //Делаем 1-ю ссылку активной при открывании списка игр 
+    for(i=0; i<itemsInGamesBar.length; i++) {
+        itemsInGamesBar[i].classList.remove('active');   
+    }
+    itemsInGamesBar[0].classList.add('active');   
+}
+//Open window with my projects 
+const projectsCard = document.querySelector('.myProgects__card');
+projectsCard.ontouchstart = function() {
+    document.querySelector('.projectsWindow__navBar').classList.add('active');
+    setTimeout(()=> {
+        document.querySelector('.projsctsWindow__content').classList.add('active');
+    },300);
+    //Делаем цвет открывающегося окна цвета карточки проектов
+    document.querySelector('.projectsWindow__navBar').style.backgroundColor = '#1A8BAB';
+    document.querySelector('.projsctsWindow__content').style.backgroundColor = '#1A8BAB';
+    //Отображаем всегда первый проект при открывании списка проектов
+    document.querySelector('.projsctsWindow__content__wrapper').innerHTML = wrapperForMyProjects[0];
+    //Делаем 1-ю ссылку активной при открывании списка проектов 
+    for(i=0; i<itemsInProjectsBar.length; i++) {
+        itemsInProjectsBar[i].classList.remove('active');   
+    }
+    itemsInProjectsBar[0].classList.add('active');   
+} 
+//Close window with projects
+closeButtonForGamesWindow.ontouchstart = function() {
+    document.querySelector('.gamesWindow__navBar').classList.remove('active');
+    document.querySelector('.projectsWindow__navBar').classList.remove('active');
+    document.querySelector('.projsctsWindow__content').classList.remove('active');
+}
+
+//Select games in nav bar
+document.querySelector('.gamesWindow__navBar__wrapper').addEventListener('touchstart', (e) => {
+    if(e.target.className === 'gamesWindow__navBar__item') {
+        for(i=0; i<itemsInGamesBar.length; i++) {
+            itemsInGamesBar[i].classList.remove('active');
+            if(e.target.innerHTML === myGamesArray[i].name) {
+                e.target.classList.add('active');
+                document.querySelector('.projsctsWindow__content__wrapper').innerHTML = wrapperForGames[i];
+            }
+        }
+    }
+});
+
+//Select projects in nav bar
+document.querySelector('.projectsWindow__navBar__wrapper').addEventListener('touchstart', (e) => {
+    if(e.target.className === 'projectsWindow__navBar__item') {
+        for(i=0; i<itemsInProjectsBar.length; i++) {
+            itemsInProjectsBar[i].classList.remove('active');
+            if(e.target.innerHTML === myProjectsArray[i].name) {
+                e.target.classList.add('active');
+                document.querySelector('.projsctsWindow__content__wrapper').innerHTML = wrapperForMyProjects[i];
+            }
+        }
+    }
+});
