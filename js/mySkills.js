@@ -17,7 +17,7 @@ signs.forEach(el => {
 });
 
 //Auto Print Text
-new TypeIt(".mySkills__autoPrintText", {
+/*new TypeIt(".mySkills__autoPrintText", {
     strings: [
         "Мои навыки:",
         "HTML, CSS, JavaScript, React, Redux, material UI.",
@@ -25,4 +25,4 @@ new TypeIt(".mySkills__autoPrintText", {
     ],
     speed: 20,
     waitUntilVisible: true
-  }).go();
+  }).go();*/
