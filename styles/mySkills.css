@@ -80,4 +80,7 @@ x-sign {
 		height: 80%;
 		width: 80%;
 	}
+	x-sign {
+		top: 5%;	
+	}
   }
