@@ -75,3 +75,9 @@ x-sign {
     --color4: purple;
     font-family: Gruppo;
   }
+  @media (max-width: 600px){
+	.box > span > img {
+		height: 80%;
+		width: 80%;
+	}
+  }
