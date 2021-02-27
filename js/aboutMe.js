@@ -3,7 +3,7 @@ let norwegianVScode = document.getElementById('norwegianVScode');
 window.addEventListener('hashchange', (e) => {  
     console.log(window.location.hash)
     if(window.location.hash === '#norwegian') {
-        norwegianVScode.style.left = '10%'
+        norwegianVScode.style.left = '0%'
     } else {norwegianVScode.style.left = '100%'}
 });
 
