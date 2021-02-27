@@ -61,7 +61,7 @@
     }
 }
 
-/*Game Card*/
+/*Game Cards*/
 
 .myProgects__gamesCard{
     width: 20%;
@@ -353,3 +353,90 @@ a{
 .content__inner__button a:hover{
     background-color: #FD583A;
 }
+
+  @media (max-width: 900px){
+	 .spinning__react__icon{
+		top: 50%;
+		width: 40%;
+	}
+	/*Games Card*/
+	.myProgects__gamesCard{
+		width: 300px;
+		height: 25%;
+		background-size: cover;
+		background-position: center;
+	}
+	.myProgects__gamesCard__control{
+		display: none;
+	}
+	.myProgects__gamesCard.animationStart{
+		left: 50%;
+		transform: translateX(-50%);
+		top: 58%;
+	}
+	@keyframes gameCardMove {  /*Вылет карты Game*/
+		0% {
+			left: 150%;
+			top: -100%;
+			transform: scale(1);
+		}
+		50%{
+			left: 0;
+			top: 10%;
+			transform: scale(0.1) rotateY(360deg);
+		}
+		100% {
+			left: 50%;
+			top: 58%;
+			transform: scale(1) rotateY(720deg) translateX(-50%);
+		}
+	}
+	/*Projects card*/
+	.myProgects__card{
+		width: 300px;
+		height: 25%;
+		background-size: cover;
+		background-position: center;
+	}
+	.myProgects__card__control{
+		display: none;
+	}
+	.myProgects__card.animationStartForMyProjectCard{
+		left: 50%;
+		transform: translateX(-50%);
+		top: -20%;
+	}
+	@keyframes myProjectCardMove {  /*Вылет карты my project*/
+		0% {
+			left: -50%;
+			top: -100%;
+			transform: scale(1);
+		}
+		50%{
+			left: 0%;
+			top: 10%;
+			transform: scale(0.1) rotateY(720deg);
+		}
+		100% {
+			left: 50%;
+			top: -20%;
+			transform: scale(1) translateX(-50%);
+		}
+	} 
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
