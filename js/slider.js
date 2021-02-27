@@ -169,6 +169,21 @@ var slider = function (sliderElement) {
       document.querySelector('.menu').classList.remove("animate");
     }
   });
+   //for touch devices
+  document.querySelector('body').addEventListener('touchstart', (e) => {
+    //For indicators
+    if(e.target.className === 'slider__indicator') {
+      let section = document.querySelector(`section[data-slider-index='${e.target.getAttribute('data-slider-target-index')}']`);
+      gotoSlide('#'+section.getAttribute('id'));  
+    }
+    //For menu
+    if(e.target.className === 'menuItem') {
+      let section = document.querySelector(`section[data-slider-index='${e.target.getAttribute('data-slider-target-index')}']`);
+      gotoSlide('#'+section.getAttribute('id'));  
+      document.querySelector('.burger span').classList.remove('active');
+      document.querySelector('.menu').classList.remove("animate");
+    }
+  });
 
   // we have lift off
   if (document.readyState === 'complete') {
