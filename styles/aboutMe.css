@@ -51,7 +51,7 @@ body{
 .vscode{
     position: relative;
     padding-top: 10%;
-    padding-left: 10%;
+	padding-left: 10%;
     height: 100%;
     width: auto;
     transition: all .3s;
@@ -82,6 +82,7 @@ body{
     height: 100%;
     width: auto;
 }
+
 @media (max-width: 600px){
 	.aboutMe{
 		flex-direction: column;
@@ -115,6 +116,12 @@ body{
 		font-size: 14px;
 	}
 }
-
+/*
+@media (max-width: 450px){
+	.vscodeText{
+		left: 24%;
+	}
+}
+*/
 
 
