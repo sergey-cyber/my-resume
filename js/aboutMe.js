@@ -9,7 +9,7 @@ window.addEventListener('hashchange', (e) => {
 
 //Auto Print Text
 
-new TypeIt(".vscodePrintText", {
+typeIt = new TypeIt(".vscodePrintText", {
     strings: [
         "/*","Привет!!!!", "Меня зовут Сергей!", 
         "В течение года я занимаюсь самообучением Front-end разработке. За это время освоил такие технологии как:",
@@ -21,4 +21,8 @@ new TypeIt(".vscodePrintText", {
     ],
     speed: 30,
     waitUntilVisible: true
-  }).go();
+  });
+
+window.onload = () => {
+    typeIt.go();
+}
