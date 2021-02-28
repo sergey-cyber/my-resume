@@ -23,6 +23,3 @@ typeIt = new TypeIt(".vscodePrintText", {
     waitUntilVisible: true
   });
 
-window.onload = () => {
-    typeIt.go();
-}
