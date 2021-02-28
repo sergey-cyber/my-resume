@@ -6,7 +6,14 @@ document.querySelector('.burger').addEventListener('click', function(){
     },700) */  
 });
 //For touch devices
+let schetchik = 0;
 document.querySelector('.burger').addEventListener('touchstart', function(){
-    document.querySelector('.burger span').classList.toggle('active');
-    document.querySelector('.menu').classList.toggle("animate"); 
+    if(schetchik%2 === 0) {
+		document.querySelector('.burger span').classList.add('active');
+		document.querySelector('.menu').classList.add("animate");
+	} else {
+		document.querySelector('.burger span').classList.remove('active');
+		document.querySelector('.menu').classList.remove("animate");
+	} 
+	schetchik++;
 });
