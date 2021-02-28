@@ -52,19 +52,19 @@ const itemsInGamesBar = document.querySelectorAll('.gamesWindow__navBar__item');
 const myGamesArray = [
     {
         name:'', content: 'При разработке были применены: <br> HTML, CSS, JavaScript, Canvas', index: '',
-        href: 'https://sergey-cyber.github.io/destroy-balls-game/', img: 'images/myProjects/balls.jpg'
+        href: 'https://sergey-cyber.github.io/destroy-balls-game/', img: 'images/myProjects/balls.webp'
     },
     {
         name:'', content: 'При разработке были применены: <br> HTML, CSS, JavaScript, Canvas', index: '',
-        href: 'https://sergey-cyber.github.io/tennis-game/', img: 'images/myProjects/tennis.jpg'
+        href: 'https://sergey-cyber.github.io/tennis-game/', img: 'images/myProjects/tennis.webp'
     },
     {
         name:'', content: 'При разработке были применены: <br>HTML, CSS, JavaScript', index: '',
-        href: 'https://sergey-cyber.github.io/card-game/', img: 'images/myProjects/cards.jpg'
+        href: 'https://sergey-cyber.github.io/card-game/', img: 'images/myProjects/cards.webp'
     },
     {
         name:'', content: 'При разработке были применены: <br> HTML, CSS, JavaScript, Canvas', index: '',
-        href: 'https://sergey-cyber.github.io/sea-battle/', img: 'images/myProjects/seaBattle.jpg'
+        href: 'https://sergey-cyber.github.io/sea-battle/', img: 'images/myProjects/seaBattle.webp'
     }
 ];
 //Каждому name присваиваем название кнопок в навбаре
@@ -110,15 +110,15 @@ const itemsInProjectsBar = document.querySelectorAll('.projectsWindow__navBar__i
 const myProjectsArray = [   //Data by my projects
     {
         name:'', content: 'При разработке были применены: JavaScript, React, Redux, Redux-form, Material UI.<br>Социальная сеть, созданная на основе курса по React+Redux на канале IT - Kamasutra.(Автор курса Дмитрий Кузюбердин). Для теста приложения воспользуйтесь тестовым логином: myfreezaccount@mail.ru и поролем: Fedra123456. ', index: '',
-        href: 'https://sergey-cyber.github.io/social-network/', img: 'images/myProjects/social.jpg'
+        href: 'https://sergey-cyber.github.io/social-network/', img: 'images/myProjects/social.webp'
     },
     {
         name:'', content: 'При разработке были применены: JavaScript, React, Redux, Redux-form, Material UI, node js, mongoDB.<br> Адаптивный блокнот с возможностью создавать страницы на различные темы. Front реализован на react+redux. Backend на express + mongoDB + Heroku Hosting. Для теста воспользуйтесь логином test и паролем test или зарегистрируйте свой аккаунт.', index: '',
-        href: 'https://sergey-cyber.github.io/my-notepad-react-app/', img: 'images/myProjects/notepad.jpg'
+        href: 'https://sergey-cyber.github.io/my-notepad-react-app/', img: 'images/myProjects/notepad.webp'
     },
     {
         name:'', content: 'При разработке были применены: <br>HTML, CSS, JavaScript, Swiper js. Freelanse заказ по созданию сайта для it-школы MegaCom. Сайт адоптирован под различные устройства. Для мобильной версии слайдеры выполнены с применением swiper js, для desktop версии на чистом javaScript.', index: '',
-        href: 'https://itschool.megacom.kg/', img: 'images/myProjects/megacom.jpg'
+        href: 'https://itschool.megacom.kg/', img: 'images/myProjects/megacom.webp'
     }
 ];
 //Каждому name присваиваем название кнопок в навбаре
