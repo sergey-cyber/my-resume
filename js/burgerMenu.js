@@ -6,7 +6,7 @@ document.querySelector('.burger').addEventListener('click', function(){
     },700) */  
 });
 //For touch devices
-let schetchik = 0;
+let schetchik = 1;
 document.querySelector('.burger').addEventListener('touchstart', function(){
     if(schetchik%2 === 0) {
 		document.querySelector('.burger span').classList.add('active');
